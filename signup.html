@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div id="background" style="background-image: url('Images/wp2337016.jpg')"></div>
+
+    <!-- Home Page Laptop Container -->
+    <div class="home-page-laptop">
+  
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="container">
+                <img class="logo-icon" alt="Logo" src="Images/logooo.jpg">
+            </div>
+
+            <!-- Navbar Buttons -->
+            <div class="buttons-container">
+                <button class="button">
+                    <a href="astha_01.html" class="text">Home</a>
+                </button>
+                <button class="button">
+                    <a href="vanshika.html" class="text">Courses</a>
+                </button>
+                <button class="button">
+                    <a href="about us.html" class="text">About Us</a>
+                </button>
+                <button class="button">
+                    <a href="sanya.html" class="text">Pricing</a>
+                </button>
+                <button class="button">
+                    <a href="contact.html" class="text">Contact</a>
+                </button>
+            </div>
+
+            <!-- Sign Up and Login Buttons -->
+            <div class="buttons-container1">
+                <button class="button">
+                    <a href="signup.html" class="text">Sign Up</a>
+                </button>
+                <button class="button2">
+                    <a href="login.html" class="text">Login</a>
+                </button>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <form action="#" method="POST" onsubmit="return validateForm()">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                <div id="password-error" class="error-message"></div>
+
+                <!-- Terms and Conditions -->
+                <div class="terms">
+                    <label for="termsCheckbox">I accept the</label>
+                    <a href="#" id="openModal">Terms and Conditions</a>
+                    <input type="checkbox" id="termsCheckbox" required>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Terms and Conditions</h2>
+            <p>Here are the terms and conditions of our service...</p>
+        </div>
+    </div>
+
+    <script>
+        // Password validation
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+            var errorMessage = document.getElementById("password-error");
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords don't match!";
+                errorMessage.style.color = "red";
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+
+        // Get the modal
+        var modal = document.getElementById("termsModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("openModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

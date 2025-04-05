@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Webinar Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: url('https://img.freepik.com/free-vector/webinar-background-flat-style_23-2147769238.jpg?w=1060&t=st=1708370964~exp=1708371564~hmac=f3a857460af7b08317b0ff5d94767774abed2613e52d86046c3a74420f76e373') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 223, 0, 0.4);
+      z-index: 1;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .links, .back-link {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #777;
+      z-index: 2;
+    }
+
+    .links a, .back-link a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+    .links a:hover, .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    .forgot-password {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="links">
+      <a href="forgot-password.html" class="forgot-password">Forgot Password?</a>
+      <p>
+        Don't have an account? <a href="signup.html">Sign up here</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
